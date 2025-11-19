@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Heart, Star, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { collections } from "@/data/collections";
@@ -9,29 +9,11 @@ import AnimatedText from "@/components/AnimatedText";
 import { motion } from "framer-motion";
 
 const Home = () => {
-  const features = [
-    {
-      icon: Sparkles,
-      title: "עיצוב ייחודי",
-      description: "כל שמלה מעוצבת בקפידה עם תשומת לב לפרטים הקטנים ביותר"
-    },
-    {
-      icon: Heart,
-      title: "שירות אישי",
-      description: "ליווי מקצועי ואישי לאורך כל התהליך עד למציאת השמלה המושלמת"
-    },
-    {
-      icon: Star,
-      title: "איכות פרימיום",
-      description: "בדים איכותיים ותפירה מעולה המבטיחים מראה מושלם"
-    }
-  ];
-
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-20 md:pt-24">
         {/* Hero Section */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
           {/* Background Image */}
@@ -91,32 +73,6 @@ const Home = () => {
                   </Button>
                 </Link>
               </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 rtl">
-              {features.map((feature, index) => (
-                <AnimatedSection
-                  key={index}
-                  animation="fade-up"
-                  delay={index * 0.15}
-                  className="text-center p-8 rounded-3xl bg-background/50 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg group"
-                >
-                  <motion.div
-                    className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <feature.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-                  </motion.div>
-                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                </AnimatedSection>
-              ))}
             </div>
           </div>
         </section>

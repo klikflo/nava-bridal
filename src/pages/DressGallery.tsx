@@ -17,7 +17,7 @@ const DressGallery = () => {
     return (
       <div className="min-h-screen flex flex-col bg-background">
         <Header />
-        <main className="flex-1 pt-24 flex items-center justify-center">
+        <main className="flex-1 pt-20 md:pt-24 flex items-center justify-center">
           <div className="text-center rtl">
             <h1 className="text-4xl font-bold mb-4">שמלה לא נמצאה</h1>
             <Link to="/">
@@ -48,7 +48,7 @@ const DressGallery = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-20 md:pt-24">
         {/* Breadcrumb */}
         <div className="container mx-auto px-4 py-8">
           <div className="flex items-center gap-2 text-sm text-muted-foreground rtl">

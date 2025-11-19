@@ -35,7 +35,7 @@ const WeddingPlanner = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-20 md:pt-24">
         {/* Hero Section with Parallax Image */}
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
           {/* Parallax Background Image */}

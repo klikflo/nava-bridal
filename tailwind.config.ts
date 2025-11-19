@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Heebo', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['Heebo', 'sans-serif'],
+        display: ['Heebo', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

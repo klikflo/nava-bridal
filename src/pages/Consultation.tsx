@@ -41,16 +41,17 @@ const Consultation = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-20 md:pt-24">
         {/* Hero Section with Parallax Image */}
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
           {/* Parallax Background Image */}
           <div className="absolute inset-0">
             <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out"
+              className="absolute inset-0 bg-cover transition-transform duration-700 ease-out"
               style={{
                 backgroundImage: "url('/Uploads/קולקציה Moonlight /1/IMG_0128 Large.png')",
                 backgroundAttachment: "fixed",
+                backgroundPosition: "center 20%",
                 transform: "scale(1.1)"
               }}
             />

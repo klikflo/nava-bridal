@@ -12,7 +12,7 @@ const OurBrides = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-20 md:pt-24">
         {/* Hero Section */}
         <section className="relative min-h-[60vh] bg-gradient-to-br from-primary/5 via-muted/30 to-accent/5 flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
