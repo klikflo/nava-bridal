@@ -37,7 +37,7 @@ const Home = () => {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src="/Uploads/קולקציה Falling in love /FLORA/IMG_3864.jpg"
+              src="/Uploads/קולקציה Falling in love /FLORA/IMG_3864 Large.png"
               alt="NAVA BRIDAL"
               className="w-full h-full object-cover object-[center_20%]"
             />

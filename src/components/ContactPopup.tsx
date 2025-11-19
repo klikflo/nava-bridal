@@ -55,7 +55,7 @@ const ContactPopup = () => {
             {/* Image Side */}
             <div className="relative h-48 sm:h-64 md:h-auto">
               <img
-                src="/Uploads/קולקציה Falling in love /FLORA/IMG_3864.jpg"
+                src="/Uploads/קולקציה Falling in love /FLORA/IMG_3864 Large.png"
                 alt="NAVA BRIDAL"
                 className="w-full h-full object-cover object-[center_30%]"
               />

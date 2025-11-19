@@ -43,7 +43,7 @@ const WeddingPlanner = () => {
             <div
               className="absolute inset-0 bg-cover transition-transform duration-700 ease-out"
               style={{
-                backgroundImage: "url('/Uploads/brides/עדן.JPG')",
+                backgroundImage: "url('/Uploads/brides/עדן Medium.png')",
                 backgroundAttachment: "fixed",
                 backgroundPosition: "center 20%",
                 transform: "scale(1.1)"

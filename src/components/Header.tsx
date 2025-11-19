@@ -27,14 +27,14 @@ const Header = () => {
       name: "Falling In Love",
       nameHe: "Falling In Love",
       path: "/collections/falling-in-love",
-      image: "/Uploads/קולקציה Falling in love /FLORA/IMG_3864.jpg",
+      image: "/Uploads/קולקציה Falling in love /FLORA/IMG_3864 Large.png",
       description: "קולקציה רומנטית בהשראת עונת הסתיו"
     },
     {
       name: "Moonlight",
       nameHe: "Moonlight",
       path: "/collections/moonlight",
-      image: "/Uploads/קולקציה Moonlight /1/391F4C16-8778-4BEC-B660-EA2BE55C4456.png",
+      image: "/Uploads/קולקציה Moonlight /1/391F4C16-8778-4BEC-B660-EA2BE55C4456 Large.png",
       description: "אלגנטיות קלאסית עם נגיעות מודרניות"
     },
   ];

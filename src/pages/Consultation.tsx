@@ -49,7 +49,7 @@ const Consultation = () => {
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out"
               style={{
-                backgroundImage: "url('/Uploads/קולקציה Moonlight /1/IMG_3893.jpg')",
+                backgroundImage: "url('/Uploads/קולקציה Moonlight /1/IMG_0128 Large.png')",
                 backgroundAttachment: "fixed",
                 transform: "scale(1.1)"
               }}
