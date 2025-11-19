@@ -170,7 +170,7 @@ const Header = () => {
                 <span className="sr-only">תפריט</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[85vw] max-w-[380px] rtl bg-background/98 backdrop-blur-md overflow-y-auto">
+            <SheetContent side="right" className="w-[85vw] max-w-[380px] rtl bg-white overflow-y-auto">
               <div className="flex flex-col gap-6 py-4">
                 <div className="flex flex-col items-center justify-center pb-4 border-b border-border">
                   <img
