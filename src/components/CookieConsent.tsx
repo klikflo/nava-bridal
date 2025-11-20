@@ -35,18 +35,18 @@ const CookieConsent = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[90] p-4 md:p-6 animate-fade-in">
       <div className="container mx-auto max-w-6xl">
-        <div className="bg-background/95 backdrop-blur-lg border-2 border-border rounded-2xl shadow-2xl p-6 md:p-8">
+        <div className="bg-background/95 backdrop-blur-lg border border-border/30 shadow-[0_8px_24px_rgba(0,0,0,0.15)] p-6 md:p-8">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             {/* Content */}
             <div className="flex-1 rtl">
               <div className="mb-3">
-                <h3 className="text-lg md:text-xl font-bold mb-2">
+                <h3 className="text-base md:text-lg font-light mb-3 tracking-wide">
                   אנחנו משתמשים בעוגיות
                 </h3>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed font-light">
                   אתר זה משתמש בעוגיות (Cookies) כדי לשפר את חוויית הגלישה שלך, לנתח תנועה באתר ולספק תוכן מותאם אישית.
                   על ידי המשך הגלישה באתר, את מסכימה לשימוש בעוגיות בהתאם ל
-                  <Link to="/privacy-policy" className="text-primary hover:underline mx-1 font-medium">
+                  <Link to="/privacy-policy" className="text-primary hover:underline mx-1 font-light">
                     מדיניות הפרטיות
                   </Link>
                   שלנו.

@@ -4,11 +4,11 @@ const FloatingWhatsApp = () => {
       href="https://wa.me/972546922630"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-3 sm:p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 group"
+      className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50 bg-primary hover:bg-primary/90 text-primary-foreground p-3 sm:p-4 shadow-[0_4px_16px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-all duration-500 hover:scale-105 group border border-primary/20"
       aria-label="WhatsApp"
     >
       <svg
-        className="w-6 h-6 sm:w-8 sm:h-8 group-hover:scale-110 transition-transform"
+        className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-105 transition-transform duration-500"
         fill="currentColor"
         viewBox="0 0 24 24"
       >
@@ -16,7 +16,7 @@ const FloatingWhatsApp = () => {
       </svg>
 
       {/* Tooltip - Hidden on mobile */}
-      <span className="hidden sm:block absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      <span className="hidden sm:block absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-foreground text-background text-xs font-light tracking-wide px-4 py-2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none shadow-[0_4px_12px_rgba(0,0,0,0.15)]">
         צ'אט ב-WhatsApp
       </span>
     </a>

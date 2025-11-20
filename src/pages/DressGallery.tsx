@@ -51,23 +51,23 @@ const DressGallery = () => {
       <main className="flex-1 pt-20 md:pt-24">
         {/* Breadcrumb */}
         <div className="container mx-auto px-4 py-8">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground rtl">
-            <Link to="/" className="hover:text-primary transition-colors">דף הבית</Link>
-            <ChevronLeft className="w-4 h-4 rotate-180" />
-            <Link to={`/collections/${collectionId}`} className="hover:text-primary transition-colors">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground rtl font-light tracking-wide">
+            <Link to="/" className="hover:text-primary transition-colors duration-500">דף הבית</Link>
+            <ChevronLeft className="w-3 h-3 rotate-180" />
+            <Link to={`/collections/${collectionId}`} className="hover:text-primary transition-colors duration-500">
               {collection.nameHe}
             </Link>
-            <ChevronLeft className="w-4 h-4 rotate-180" />
+            <ChevronLeft className="w-3 h-3 rotate-180" />
             <span className="text-foreground">{dress.name}</span>
           </div>
         </div>
 
         {/* Gallery Section */}
-        <div className="container mx-auto px-4 pb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="container mx-auto px-4 pb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-16 items-start max-w-7xl mx-auto">
             {/* Image Gallery */}
-            <div className="space-y-6">
-              <div className="relative aspect-[3/4] bg-muted rounded-3xl overflow-hidden shadow-2xl">
+            <div className="space-y-8">
+              <div className="relative aspect-[3/4.5] bg-muted overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.18)] border border-border/40">
                 {hasImages ? (
                   <>
                     <img
@@ -80,14 +80,14 @@ const DressGallery = () => {
                       <>
                         <button
                           onClick={prevImage}
-                          className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm p-3 rounded-full hover:bg-background transition-all hover:scale-110"
+                          className="absolute left-6 top-1/2 -translate-y-1/2 bg-background/95 backdrop-blur-sm p-4 hover:bg-background transition-all duration-500 hover:scale-105 border border-border/40 shadow-lg"
                           aria-label="תמונה קודמת"
                         >
                           <ChevronRight className="w-6 h-6" />
                         </button>
                         <button
                           onClick={nextImage}
-                          className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm p-3 rounded-full hover:bg-background transition-all hover:scale-110"
+                          className="absolute right-6 top-1/2 -translate-y-1/2 bg-background/95 backdrop-blur-sm p-4 hover:bg-background transition-all duration-500 hover:scale-105 border border-border/40 shadow-lg"
                           aria-label="תמונה הבאה"
                         >
                           <ChevronLeft className="w-6 h-6" />
@@ -96,8 +96,8 @@ const DressGallery = () => {
                     )}
                   </>
                 ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-primary/15 via-primary/8 to-accent/10">
-                    <span className="text-6xl font-light font-serif text-muted-foreground mb-4">
+                  <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10">
+                    <span className="text-6xl font-extralight font-serif text-muted-foreground mb-4">
                       {dress.name}
                     </span>
                     <p className="text-muted-foreground">תמונות בקרוב</p>
@@ -107,15 +107,15 @@ const DressGallery = () => {
 
               {/* Thumbnail Navigation */}
               {hasImages && dress.images.length > 1 && (
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-4 gap-5">
                   {dress.images.map((image, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`aspect-square rounded-2xl overflow-hidden border-2 transition-all ${
+                      className={`aspect-square overflow-hidden border transition-all duration-500 shadow-md ${
                         currentImageIndex === index
-                          ? 'border-primary scale-105'
-                          : 'border-transparent hover:border-primary/50'
+                          ? 'border-primary scale-105 shadow-lg'
+                          : 'border-border/40 hover:border-primary/50 hover:shadow-lg'
                       }`}
                     >
                       <img
@@ -130,33 +130,33 @@ const DressGallery = () => {
             </div>
 
             {/* Dress Details */}
-            <div className="space-y-8 rtl">
+            <div className="space-y-8 rtl lg:sticky lg:top-32">
               <div>
-                <h1 className="text-5xl md:text-6xl font-light font-serif italic mb-4">
+                <h1 className="text-4xl md:text-5xl font-extralight font-serif italic mb-6 tracking-[0.05em]">
                   {dress.name}
                 </h1>
-                <div className="w-24 h-1 bg-gradient-to-r from-primary to-transparent mb-6"></div>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <div className="w-20 h-px bg-gradient-to-r from-primary to-transparent mb-8"></div>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
                   {dress.description}
                 </p>
               </div>
 
-              <div className="bg-muted/50 rounded-3xl p-8 space-y-4">
-                <h3 className="text-2xl font-bold font-display mb-4">פרטי השמלה</h3>
-                <p className="text-muted-foreground">
+              <div className="bg-muted/20 p-8 space-y-4 border border-border/30 shadow-sm">
+                <h3 className="text-lg font-light font-display mb-4 tracking-wide">פרטי השמלה</h3>
+                <p className="text-muted-foreground font-light text-base">
                   שמלה מקולקציית {collection.nameHe}
                 </p>
               </div>
 
               {/* CTA Buttons */}
-              <div className="space-y-4">
+              <div className="space-y-4 pt-4">
                 <Link to="/consultation" className="block">
-                  <Button size="lg" className="w-full rounded-full py-7 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <Button size="lg" className="w-full py-7 text-sm font-light shadow-[0_12px_32px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.22)] transition-all duration-500 hover:scale-[1.02]">
                     קביעת פגישה למדידה
                   </Button>
                 </Link>
                 <Link to={`/collections/${collectionId}`}>
-                  <Button size="lg" variant="outline" className="w-full rounded-full py-7 text-lg">
+                  <Button size="lg" variant="outline" className="w-full py-7 text-sm font-light border-border/40 hover:border-primary/50 transition-all duration-500">
                     חזרה לקולקציה
                   </Button>
                 </Link>

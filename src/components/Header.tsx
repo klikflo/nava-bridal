@@ -42,7 +42,7 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 w-full bg-background/98 backdrop-blur-md z-50 border-b border-border/50 shadow-sm">
+    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-xl z-50 border-b border-border/30 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-20 md:h-24 rtl">
           {/* Logo - Far Right */}
@@ -60,43 +60,43 @@ const Header = () => {
               {/* Collections Dropdown - Modern & Stylish */}
               <li>
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors flex items-center gap-1 outline-none group">
+                  <DropdownMenuTrigger className="text-xs font-light tracking-wider uppercase text-foreground/70 hover:text-primary transition-colors duration-500 flex items-center gap-1 outline-none group">
                     קולקציות
-                    <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+                    <ChevronDown className="w-3 h-3 group-hover:rotate-180 transition-transform duration-500" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent
                     align="center"
-                    className="rtl w-[500px] p-2 bg-background/98 backdrop-blur-xl border-2 border-border/50 shadow-2xl rounded-2xl"
+                    className="rtl w-[500px] p-3 bg-background/95 backdrop-blur-xl border border-border/30 shadow-[0_8px_24px_rgba(0,0,0,0.08)] rounded-sm"
                   >
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-2 gap-4">
                       {collections.map((collection) => (
                         <Link
                           key={collection.path}
                           to={collection.path}
-                          className="group relative overflow-hidden rounded-xl border-2 border-border/30 hover:border-primary/50 transition-all duration-300 hover:shadow-xl"
+                          className="group relative overflow-hidden border border-border/30 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)]"
                         >
                           {/* Image */}
                           <div className="relative h-40 overflow-hidden">
                             <img
                               src={collection.image}
                               alt={collection.nameHe}
-                              className="w-full h-full object-cover object-[center_30%] group-hover:scale-110 transition-transform duration-500"
+                              className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700"
                             />
                             {/* Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
                             {/* Content */}
                             <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                              <h3 className="text-lg font-bold font-display mb-1 drop-shadow-lg">
+                              <h3 className="text-base font-light font-display mb-1 drop-shadow-lg tracking-wide">
                                 {collection.nameHe}
                               </h3>
-                              <p className="text-xs text-white/90 line-clamp-2 drop-shadow">
+                              <p className="text-xs text-white/80 line-clamp-2 drop-shadow font-light">
                                 {collection.description}
                               </p>
                             </div>
 
                             {/* Hover Effect */}
-                            <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                           </div>
                         </Link>
                       ))}
@@ -110,12 +110,12 @@ const Header = () => {
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    className={`text-sm font-medium relative group transition-colors ${
-                      isActive(item.path) ? 'text-primary' : 'text-foreground/80 hover:text-primary'
+                    className={`text-xs font-light tracking-wider uppercase relative group transition-colors duration-500 ${
+                      isActive(item.path) ? 'text-primary' : 'text-foreground/70 hover:text-primary'
                     }`}
                   >
                     {item.name}
-                    <span className={`absolute -bottom-1 right-0 h-0.5 bg-primary transition-all duration-300 ${
+                    <span className={`absolute -bottom-1 right-0 h-px bg-primary transition-all duration-500 ${
                       isActive(item.path) ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}></span>
                   </Link>
@@ -130,7 +130,7 @@ const Header = () => {
               href="https://www.tiktok.com/@nava.bridal"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-primary hover:scale-110 transition-all duration-200"
+              className="text-foreground/60 hover:text-primary hover:scale-105 transition-all duration-500"
               aria-label="TikTok"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -141,7 +141,7 @@ const Header = () => {
               href="http://instagram.com/nava.bridal"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-primary hover:scale-110 transition-all duration-200"
+              className="text-foreground/60 hover:text-primary hover:scale-105 transition-all duration-500"
               aria-label="Instagram"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -153,7 +153,7 @@ const Header = () => {
               href="https://www.facebook.com/navabridalstudio"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-primary hover:scale-110 transition-all duration-200"
+              className="text-foreground/60 hover:text-primary hover:scale-105 transition-all duration-500"
               aria-label="Facebook"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

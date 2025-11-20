@@ -10,47 +10,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Luxury color palette: Antique Rose Gold, Black, White, Grey */
     --background: 0 0% 100%;
-    --foreground: 0 0% 5%;
+    --foreground: 0 0% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 5%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 340 75% 65%;
+    /* Antique Rose Gold - Primary accent color */
+    --primary: 15 35% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 25 45% 92%;
-    --secondary-foreground: 0 0% 5%;
+    /* Soft grey for secondary elements */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 25 30% 96%;
-    --muted-foreground: 0 0% 40%;
+    /* Muted grey tones */
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 340 75% 65%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent using rose gold */
+    --accent: 15 35% 65%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 25 20% 88%;
-    --input: 25 20% 88%;
-    --ring: 340 75% 65%;
+    /* Subtle borders in grey */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 15 35% 65%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-foreground: 0 0% 8%;
+    --sidebar-primary: 15 35% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 15 35% 65%;
   }
 
   .dark {
+    /* Dark mode with black background and rose gold accents */
     --background: 0 0% 8%;
     --foreground: 0 0% 98%;
 
@@ -60,8 +67,9 @@ All colors MUST be HSL.
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 340 75% 70%;
-    --primary-foreground: 0 0% 100%;
+    /* Brighter rose gold for dark mode */
+    --primary: 15 40% 70%;
+    --primary-foreground: 0 0% 8%;
 
     --secondary: 0 0% 14%;
     --secondary-foreground: 0 0% 98%;
@@ -69,23 +77,23 @@ All colors MUST be HSL.
     --muted: 0 0% 14%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 340 75% 70%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 15 40% 70%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 340 75% 70%;
+    --ring: 15 40% 70%;
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 340 75% 70%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 15 40% 70%;
+    --sidebar-primary-foreground: 0 0% 8%;
     --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 340 75% 70%;
+    --sidebar-ring: 15 40% 70%;
   }
 }
 
@@ -199,6 +207,38 @@ All colors MUST be HSL.
     }
   }
 
+  /* Luxury animations */
+  @keyframes elegant-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes luxury-shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes subtle-pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.95;
+      transform: scale(1.02);
+    }
+  }
+
   .animate-fade-in-up {
     animation: fade-in-up 0.6s ease-out forwards;
   }
@@ -242,6 +282,25 @@ All colors MUST be HSL.
     animation: reveal-text 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
+  .animate-elegant-fade-in {
+    animation: elegant-fade-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-luxury-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(183, 148, 128, 0.15) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: luxury-shimmer 3s ease-in-out infinite;
+  }
+
+  .animate-subtle-pulse {
+    animation: subtle-pulse 4s ease-in-out infinite;
+  }
+
   /* Stagger animation delays */
   .stagger-1 { animation-delay: 0.1s; }
   .stagger-2 { animation-delay: 0.2s; }
@@ -249,6 +308,36 @@ All colors MUST be HSL.
   .stagger-4 { animation-delay: 0.4s; }
   .stagger-5 { animation-delay: 0.5s; }
   .stagger-6 { animation-delay: 0.6s; }
+
+  /* Luxury utility classes */
+  .luxury-border {
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .luxury-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .luxury-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .rose-gold-gradient {
+    background: linear-gradient(135deg,
+      hsl(15, 35%, 75%) 0%,
+      hsl(15, 35%, 65%) 50%,
+      hsl(15, 35%, 55%) 100%
+    );
+  }
+
+  .luxury-text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 }
 
 @layer base {
@@ -259,11 +348,29 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Heebo', system-ui, -apple-system, sans-serif;
+    letter-spacing: 0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Heebo', sans-serif;
-    font-weight: 700;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-weight: 200;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  h3 {
+    font-weight: 300;
+    font-size: clamp(1.5rem, 3vw, 2rem);
   }
 
   .font-serif {
@@ -272,15 +379,17 @@ All colors MUST be HSL.
 
   .font-display {
     font-family: 'Heebo', sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.03em;
   }
 
   html {
     scroll-behavior: smooth;
   }
 
-  /* Smooth transitions for interactive elements */
+  /* Smooth, elegant transitions for interactive elements */
   button, a, input, textarea, select {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   /* Image optimization */
@@ -300,21 +409,42 @@ All colors MUST be HSL.
     }
   }
 
-  /* Custom scrollbar */
+  /* Luxury custom scrollbar */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: hsl(var(--muted));
+    background: hsl(var(--background));
+    border-left: 1px solid hsl(var(--border));
   }
 
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--primary) / 0.3);
-    border-radius: 5px;
+    background: linear-gradient(
+      180deg,
+      hsl(15, 35%, 70%) 0%,
+      hsl(15, 35%, 60%) 100%
+    );
+    border-radius: 4px;
+    border: 2px solid hsl(var(--background));
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--primary) / 0.5);
+    background: linear-gradient(
+      180deg,
+      hsl(15, 35%, 65%) 0%,
+      hsl(15, 35%, 55%) 100%
+    );
+  }
+
+  /* Selection styling */
+  ::selection {
+    background: hsl(15, 35%, 65% / 0.3);
+    color: hsl(var(--foreground));
+  }
+
+  ::-moz-selection {
+    background: hsl(15, 35%, 65% / 0.3);
+    color: hsl(var(--foreground));
   }
 }
